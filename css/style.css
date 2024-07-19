@@ -1,0 +1,179 @@
+@import url(reset.css);
+@import url(grid.css);
+@import url(../css/animate.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url(../fonts/remixicon.css);
+body{
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: rgb(68,68,68);
+}
+a{
+    text-decoration: none;
+    color: rgb(68,68,68);
+}
+
+
+/*********************  HEADER  *********************/
+.top-container{
+    width: 1400px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top{
+    height: 45px;
+    font-size: 14px;
+}
+.top-logo{
+    width: 42px;
+    margin-top: 4px;
+}
+.top-right > a{
+    margin-left: 25px;
+}
+.top-login{
+    border: 1px solid #ccc;
+    padding: 3px 7px;
+}
+.grid-fill{
+    position: relative;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.subnav{
+    position: absolute;
+    z-index: 100;
+    width: 300px;
+    height: 250px;
+    border: 1px solid #ddd;
+    background: #fff;
+    right: 0;
+    top: 40px;
+    overflow: hidden;
+    display: none;
+}
+.subnav::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background:  url(../image/ddicon.jpg) no-repeat;
+    top: -6px;
+    right: 0;
+}
+.subnav img{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+.subnav-m{
+    font-size: 13px;
+    font-weight: 900;
+}
+.subnav-a{
+    border-top: 1px solid #ddd;
+    margin-top: 13px;
+}
+.subnav-a ul{
+    margin-top: 10px;
+}
+.subnav-a li{
+    font-size: 13px;
+    margin: 12px 0;
+}
+.subnav-l{
+    height: 50px;
+    background: #ddd;
+    border-top: 1px solid #ddd;
+    margin-top: 7px;
+}
+.subnav-l a{
+    font-size: 13px;
+    margin-top: 12px;
+}
+.top-email i, .grid-fill i{
+    font-size: 25px;
+}
+.top-nav{
+    height: 70px;
+    align-items: center;
+}
+nav a{
+    font-size: 18px;
+}
+nav a:hover, nav a.active{
+    font-weight: 700;
+    color: #ED3E49;
+}
+
+.main-logo{
+    font-size: 35px;
+    font-weight: 800;
+    color: #ED3E49;
+}
+.table{
+    position: relative;
+}
+.table::after{
+    content: "";
+    position: absolute;
+    display: block;
+    top: -15px;
+    right: -3px;
+    width: 32px;
+    height: 16px;
+    background: url(../image/KakaoTalk_20240717_170000083.gif) no-repeat ;
+    background-size: cover;
+}
+/* 검색창 */
+.dropdown{
+    padding-right:20px;
+    position:relative;
+    cursor:pointer;
+}
+.dropdown i {
+    font-size:19px;
+}
+.dropdown-selected{
+    text-align:right;
+}
+.dropdown-options{
+    position:absolute;
+    z-index:100;
+    border:1px solid #000;
+    font-size:14px;
+    top:30px;
+    right:20px;
+    width:90px;
+    display:none;
+}
+.dropdown-options li{
+    padding:10px;
+    cursor:pointer;
+    transition:all 300ms;
+}
+.dropdown-options li:hover{
+    background-color:#F8E9EA;
+}
+li.active{
+    font-weight:700;
+    color:#ED3E49;
+}
+.search-box{
+    border:none;
+    padding:0 5px;
+}
+.search-box:focus{
+    outline:1px solid #ED3E49;
+    border-radius:5px;
+}
+.search-button{
+    margin-left:10px;
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size:18px;
+    cursor:pointer;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daum Cafe Clone</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <header class="top-container">
+        <section class="row">
+            <div class="col-1">
+                <a href="#"><img src="image/svg/edit_image.svg" alt="logo" class="top-logo"></a>
+            </div>
+            <div class="top-right offset-9 col-2 d-flex justify-contents-end align-items-center">
+                <a href="#" class="top-login">로그인</a>
+                <a href="#" class="top-email"><i class="ri-mail-line"></i></a>
+                <div class="grid-fill"><i class="ri-layout-grid-fill"></i>
+                    <div class="subnav">
+                        <div  class="subnav-m d-flex justify-contents-around">
+                        <a href="#"><img src="image/svg/cancel.svg" alt="이미지"><br>카페</a>   
+                        <a href="#"><img src="image/svg/collect.svg" alt="이미지"><br>뉴스</a>   
+                        <a href="#"><img src="image/svg/full_battery.svg" alt="이미지"><br>지도</a>   
+                        <a href="#"><img src="image/svg/export.svg" alt="이미지"><br>쇼핑</a>   
+                         </div>
+                        <div class="subnav-a d-flex justify-contents-around">
+                            <ul>
+                                <li><a href="#">티스토리</a></td>
+                                <li><a href="#">브런치</a></td>
+                                <li><a href="#">카카오tv</a></td>
+                                <li><a href="#">게임</a></td>
+                            </ul>
+                        
+                            <ul>
+                                <li><a href="#">스포츠</a></td>
+                                <li><a href="#">연예</a></td>
+                                <li><a href="#">웹툰</a></td>
+                                <li><a href="#">멜론</a></td>
+                            </ul>
+                            <ul>
+                                <li><a href="#">어학사전</a></td>
+                                <li><a href="#">번역</a></td>
+                                <li><a href="#">맞춤법검사</a></td>
+                                <li><a href="#">백과사전</a></td>
+                            </ul>
+                            <ul>
+                                <li><a href="#">금융</a></td>
+                                <li><a href="#">부동산</a></td>
+                                <li><a href="#">메이커스</a></td>
+                                <li><a href="#">같이가치</a></td>
+                            </ul>
+                        </div>
+                        <div class="subnav-l d-flex justify-contents-around">
+                            <a href="#">전체보기</a>
+                        </div>
+                    </div>
+                    
+                        
+                    
+                    
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row top-nav">
+                <div class="col-1"><a href="#" class="main-logo">cafe</a></div>
+                <div class="col-4">
+                    <nav class="d-flex justify-contents-around">
+                        <a href="#" class="active">홈</a>
+                        <a href="#" class="table">테이블</a>
+                        <a href="#">팬카페</a>
+                        <a href="#">카페랭킹</a>
+                        <a href="#">내카페</a>
+                    </nav>
+                </div>
+                <div class="offset-3 col-4">
+                    <form class="d-flex justify-content-end">
+                        <div class="dropdown">
+                            <div class="dropdown-selected">전체검색 <i id="dropdown-icon" class="ri-arrow-down-s-line"></i></div>
+                            <ul class="dropdown-options">
+                                <li data-value="all" class="active">전체검색</li>
+                                <li data-value="all-t">통합검색</li>
+                                <li data-value="cafe">카페검색</li>
+                                <li data-value="table">테이블검색</li>
+                                <li data-value="shot">샷검색</li>
+                            </ul>
+                        </div>
+                        <input type="text" class="search-box" name="search" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="search-button"><i class="ri-search-line"></i></button>
+                        <input type="hidden" name="select" id="select">
+                     </form>
+                </div>
+            </div>
+          </div>
+        </header>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
