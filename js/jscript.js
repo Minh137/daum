@@ -1,5 +1,15 @@
 $(function(){
   let count = 0;
+
+const now = new Date();
+const nowMonth = (now.getMonth() + 1 < 10) ? '0' + (now.getMonth() + 1) : now.getMonth() + 1;
+const nowDate = (now.getDate() < 10) ? '0' + now.getDate() : now.getDate();
+const nowHours = (now.getHours() < 10) ? '0' + now.getHours() : now.getHours();
+const nowMinutes = (now.getMinutes() < 10) ? '0' + now.getMinutes() : now.getMinutes();
+const nowDay = now.getFullYear() + "." + nowMonth + "." + nowDate;
+const nowTime = nowHours + ":" + nowMinutes;
+
+$('.text-date').html(nowDay + "<strong>" + nowTime + "<strong>");
   $(".grid-fill").hover(function(){
     $(this).find(".subnav").stop().fadeToggle();
   });
@@ -49,6 +59,20 @@ $(function(){
           $('.b-table').eq(count).css('display', 'flex');
    });
 
+
+    /*****/
+    $.ajax({
+      url: "data/data.json",
+      dataType: "json",
+      success: function(data){
+         console.log(data);
+         $(".best_ul").html(displayData(data));
+      },
+      error: function(data){
+         console.error("에러", error)
+      }
+
+    });
 }); // /.jquery
 
 let i = 0;
@@ -67,4 +91,26 @@ function fadeOutIn(){
    $(".hero .hero-box").removeClass("act");
    $(".hero .hero-box:eq(0)").addClass("act");
    $('.hero .hero-box:eq(0) ul>li:first-child a').addClass("active");
+}
+
+function displayData(data){
+   let htmlData = "";
+   for(let i =0; i<data.length; i++){
+      htmlData += `<li>
+                            <a href="#">
+                                <div class="thumb_list"><img src="../daum cafe/image/${data[i].img}" alt="01"></div>
+                                <div class="text_list">
+                                    <span>${data[i].id}</span>
+                                    <p class="text_p_list">
+                                       ${data[i].title}
+                                    </p>
+                                </div>
+                                <div class="writer_list">
+                                    <span class="writer">${data[i].list}</span>
+                                    <span class="comment">${data[i].comment}</span>
+                                </div>
+                            </a>
+                        </li>`
+   }
+   return htmlData;
 }
