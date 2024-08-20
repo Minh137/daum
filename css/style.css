@@ -771,6 +771,70 @@ a.card:hover{
     top: 5px;
     position: absolute;
 }
+/******************* f-navi *******************/
+.f-navi{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.f-navi h1{
+    margin-bottom: 30px;
+}
+.f-navi span{
+    font-weight: 300;
+}
+.f-navi div{
+    font-size: 33px;
+    line-height: 50px;
+    font-weight: 300;
+    display: flex;
+}
+.f-navi div div{
+    margin-left: 35px;
+}
+.f-navi a{
+    padding: 5px 0;
+    margin-right: 30px;
+    position: relative;
+    display: inline-block;
+}
+.f-navi a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    background: #ED3E49;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: bottom right;
+    transition: transform 500ms ease;
+    transform: scaleX(0);
+}
+.f-navi a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/********************* footer ***********************/
+footer{
+    margin-top: 130px;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+}
+footer h1{
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 17px;
+}
+footer p{
+    padding: 5px 0;
+}
+footer img{
+    position: absolute;
+    top: 10px;
+    left: 935px;
+}
+
 
 
 
